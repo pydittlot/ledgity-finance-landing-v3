@@ -32,3 +32,5 @@ export const BottomCTA: React.FC = () => {
     </section>
   );
 };
+
+export default BottomCTA;

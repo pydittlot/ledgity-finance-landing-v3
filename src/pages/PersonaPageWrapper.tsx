@@ -10,5 +10,5 @@ export default function PersonaPageWrapper() {
   }, [id])
 
   if (!id) return null
-  return <PersonaPage id={id} />
+  return <PersonaPage />
 }

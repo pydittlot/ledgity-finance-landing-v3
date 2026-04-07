@@ -39,3 +39,5 @@ export const TokenSection: React.FC = () => {
     </section>
   );
 };
+
+export default TokenSection;
