@@ -13,11 +13,8 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Column 1: Logo & Description */}
           <div className="flex flex-col gap-6">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center">
-                <span className="text-white font-bold text-lg">L</span>
-              </div>
-              <span className="text-white font-bold text-lg">Ledgity</span>
+            <div className="flex items-center">
+              <img src="/ledgity-logo.png" alt="Ledgity Finance" className="h-8 w-auto" />
             </div>
 
             <p className="text-sm leading-relaxed max-w-xs">
