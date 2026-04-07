@@ -9,102 +9,99 @@ export const Hero: React.FC = () => {
   const typewriterText = useTypewriter(tArray('hero_typewriter'), 60);
 
   return (
-    <section className="pt-28 pb-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        {/* Main Hero Content */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
-          {/* Left Column */}
+    <section className="pt-24 pb-0 px-4 sm:px-6 lg:px-8" style={{ background: 'linear-gradient(135deg, #ffffff 0%, #f9fafb 100%)' }}>
+      <div className="max-w-6xl mx-auto">
+        {/* Hero row */}
+        <div className="flex flex-col lg:flex-row items-center gap-8 pb-16">
+          {/* Left */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="flex flex-col gap-8"
+            className="flex-1 max-w-2xl"
           >
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 w-fit px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
-              <span className="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
-              <span className="text-sm font-medium text-primary">{t('hero_badge')}</span>
+            <div
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-white text-sm font-semibold mb-6"
+              style={{ background: 'linear-gradient(135deg, #070b14 0%, #1e3a8a 100%)' }}
+            >
+              <span className="w-2 h-2 bg-white/60 rounded-full"></span>
+              {t('hero_badge')}
             </div>
 
-            {/* Title with Typewriter */}
-            <div className="flex flex-col gap-2">
-              <h1 className="text-5xl sm:text-6xl font-bold text-slate-900 leading-tight">
-                {t('hero_title')}
-              </h1>
-              <div className="text-4xl sm:text-5xl font-bold text-primary min-h-[1.2em] flex items-center">
-                {typewriterText}
-                <span className="ml-1 inline-block w-[3px] h-[0.8em] bg-primary animate-pulse rounded-sm" />
-              </div>
-            </div>
+            {/* Title + Typewriter inline */}
+            <h1 className="text-5xl sm:text-6xl font-bold leading-tight mb-6" style={{ color: '#14181f' }}>
+              {t('hero_title')}{' '}
+              <span className="typewriter-wrapper">
+                <span className="text-gradient">{typewriterText}</span>
+                <span className="typewriter-cursor" />
+              </span>
+            </h1>
 
-            {/* Description */}
-            <p className="text-lg text-slate-600 leading-relaxed max-w-md">
+            <p className="text-lg mb-8 max-w-lg" style={{ color: '#64748b', lineHeight: 1.7 }}>
               {t('hero_description')}
             </p>
 
-            {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
               <a
                 href="https://ledgity.finance/invest"
-                className="inline-flex items-center justify-center px-8 py-3 bg-primary text-white rounded-lg font-semibold hover:bg-primary/90 transition-colors"
+                className="inline-flex items-center justify-center px-8 py-3.5 text-white rounded-lg font-semibold transition-all hover:opacity-90"
+                style={{ background: '#132031' }}
               >
                 {t('cta_start')}
               </a>
               <a
-                href="https://docs.ledgity.finance"
-                className="inline-flex items-center justify-center px-8 py-3 border-2 border-slate-200 text-slate-700 rounded-lg font-semibold hover:border-primary hover:text-primary transition-colors"
+                href="https://calendar.app.google/j79Qd8SzdQHTbK4b7"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-8 py-3.5 rounded-lg font-semibold border transition-all hover:bg-slate-50"
+                style={{ color: '#132031', borderColor: '#132031' }}
               >
-                {t('cta_learn')}
+                {t('cta_book')}
               </a>
             </div>
           </motion.div>
 
-          {/* Right Column - Globe */}
+          {/* Globe */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="flex justify-center"
+            className="hidden lg:flex flex-shrink-0 items-center justify-center"
+            style={{ width: 420, height: 420 }}
           >
             <CobeGlobe />
           </motion.div>
         </div>
 
-        {/* Stats Bar */}
+        {/* Stats bar */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-12 border-t border-slate-200"
+          className="grid grid-cols-1 sm:grid-cols-3 bg-white rounded-2xl border mb-16"
+          style={{ borderColor: '#e5e7eb', boxShadow: '0 1px 3px rgba(0,0,0,0.08)' }}
         >
-          <div className="flex flex-col gap-2 py-6">
-            <span className="text-sm font-medium text-slate-500 uppercase tracking-wide">
-              {t('stat_tvl')}
-            </span>
-            <a
-              href="https://ledgity.finance/invest"
-              className="text-3xl sm:text-4xl font-bold text-slate-900 hover:text-primary transition-colors"
-            >
-              ${t('stat_tvl_value')}M+
-            </a>
+          <a
+            href="https://ledgity.finance/invest"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex flex-col items-center justify-center py-8 border-b sm:border-b-0 sm:border-r transition-colors hover:text-accent"
+            style={{ borderColor: '#e5e7eb', textDecoration: 'none' }}
+          >
+            <div className="text-3xl font-bold mb-1" style={{ color: '#132031' }}>$180M+</div>
+            <div className="text-sm" style={{ color: '#64748b' }}>{t('stat_tvl')}</div>
+          </a>
+          <div
+            className="flex flex-col items-center justify-center py-8 border-b sm:border-b-0 sm:border-r"
+            style={{ borderColor: '#e5e7eb' }}
+          >
+            <div className="text-3xl font-bold mb-1" style={{ color: '#132031' }}>9%</div>
+            <div className="text-sm" style={{ color: '#64748b' }}>{t('stat_yield')}</div>
           </div>
-
-          <div className="flex flex-col gap-2 py-6">
-            <span className="text-sm font-medium text-slate-500 uppercase tracking-wide">
-              {t('stat_yield')}
-            </span>
-            <p className="text-3xl sm:text-4xl font-bold text-slate-900">
-              {t('stat_yield_value')}%
-            </p>
-          </div>
-
-          <div className="flex flex-col gap-2 py-6">
-            <span className="text-sm font-medium text-slate-500 uppercase tracking-wide">
-              {t('stat_access')}
-            </span>
-            <p className="text-3xl sm:text-4xl font-bold text-slate-900">
-              {t('stat_access_value')}h/7
-            </p>
+          <div className="flex flex-col items-center justify-center py-8">
+            <div className="text-3xl font-bold mb-1" style={{ color: '#132031' }}>24h</div>
+            <div className="text-sm" style={{ color: '#64748b' }}>{t('stat_access')}</div>
           </div>
         </motion.div>
       </div>

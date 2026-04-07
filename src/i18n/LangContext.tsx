@@ -1,7 +1,7 @@
 import { createContext, useContext, useState, ReactNode } from 'react'
 
 type Lang = 'fr' | 'en'
-type LangContextType = { lang: Lang; setLang: (l: Lang) => void; t: (key: string) => string; tArray: (key: string) => string[] }
+type LangContextType = { lang: Lang; setLang: (l: Lang) => void; t: (key: string) => string; tArray: (key: string) => string[]; }
 
 const LangContext = createContext<LangContextType>(null!)
 
@@ -19,6 +19,7 @@ const translations = {
     hero_description: 'Ledgity vous permet de générer un rendement stable et sécurisé sur vos stablecoins. Actifs assurés, retraits instantanés, transparence totale.',
     cta_start: 'Commencer à investir',
     cta_learn: 'En savoir plus',
+    cta_book: 'Prendre rendez-vous',
     stat_tvl: 'Total Value Locked',
     stat_tvl_value: '5',
     stat_yield: 'Rendement annuel',
@@ -31,7 +32,18 @@ const translations = {
     products_euro_backing: 'Adossé à l\'EURC',
     products_dollar: 'Placement Dollar',
     products_dollar_backing: 'Adossé à l\'USDC',
+    products_apy: 'APY annualisé',
+    products_token: 'Token',
+    products_access: 'Accès',
+    products_instant: 'Instantané',
+    products_min_deposit: 'Dépôt minimum',
+    products_none: 'Aucun',
     products_cta: 'Investir maintenant',
+    simulator_3m: '3 mois',
+    simulator_6m: '6 mois',
+    simulator_1y: '1 an',
+    simulator_2y: '2 ans',
+    simulator_5y: '5 ans',
     simulator_title: 'Simulez votre rendement',
     simulator_subtitle: 'Estimez vos gains en quelques secondes.',
     simulator_amount_label: 'Montant à investir',
@@ -45,6 +57,7 @@ const translations = {
     simulator_months: 'mois',
     simulator_details_part3: 'génère',
     simulator_cta: 'Commencer à investir →',
+    step_label: 'Étape',
     how_title: 'Comment ça marche ?',
     how_desc: 'Quatre étapes pour commencer à générer des intérêts sur votre trésorerie.',
     how_step1_title: 'Vérification KYC',
@@ -113,6 +126,7 @@ const translations = {
     hero_description: 'Ledgity lets you earn a stable and secure yield on your stablecoins. Insured assets, instant withdrawals, full transparency.',
     cta_start: 'Start investing',
     cta_learn: 'Learn more',
+    cta_book: 'Book a call',
     stat_tvl: 'Total Value Locked',
     stat_tvl_value: '5',
     stat_yield: 'Annual yield',
@@ -125,7 +139,18 @@ const translations = {
     products_euro_backing: 'Backed by EURC',
     products_dollar: 'Dollar Savings',
     products_dollar_backing: 'Backed by USDC',
+    products_apy: 'Annualized APY',
+    products_token: 'Token',
+    products_access: 'Access',
+    products_instant: 'Instant',
+    products_min_deposit: 'Minimum deposit',
+    products_none: 'None',
     products_cta: 'Invest now',
+    simulator_3m: '3 months',
+    simulator_6m: '6 months',
+    simulator_1y: '1 year',
+    simulator_2y: '2 years',
+    simulator_5y: '5 years',
     simulator_title: 'Simulate your yield',
     simulator_subtitle: 'Estimate your gains in seconds.',
     simulator_amount_label: 'Amount to invest',
@@ -139,6 +164,7 @@ const translations = {
     simulator_months: 'months',
     simulator_details_part3: 'generates',
     simulator_cta: 'Start investing →',
+    step_label: 'Step',
     how_title: 'How it works?',
     how_desc: 'Four steps to start earning interest on your funds.',
     how_step1_title: 'KYC Verification',
@@ -222,5 +248,7 @@ export function LangProvider({ children }: { children: ReactNode }) {
   }
   return <LangContext.Provider value={{ lang, setLang, t, tArray }}>{children}</LangContext.Provider>
 }
+
+export type { Lang }
 
 export const useLang = () => useContext(LangContext)

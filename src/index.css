@@ -3,7 +3,40 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
   body {
     @apply font-sans text-foreground antialiased;
+    overflow-x: hidden;
+    line-height: 1.6;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(135deg, #070b14 0%, #1e3a8a 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .bg-gradient-dark {
+    background: linear-gradient(135deg, #070b14 0%, #1e3a8a 100%);
+  }
+  .typewriter-cursor {
+    display: inline-block;
+    width: 3px;
+    height: 0.85em;
+    background: linear-gradient(135deg, #070b14 0%, #1e3a8a 100%);
+    margin-left: 2px;
+    vertical-align: baseline;
+    position: relative;
+    top: 0.05em;
+    border-radius: 1px;
+    animation: cursorBlink 0.8s step-end infinite;
+  }
+  @keyframes cursorBlink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
   }
 }
