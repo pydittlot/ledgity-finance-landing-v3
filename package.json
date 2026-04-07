@@ -1,0 +1,28 @@
+{
+  "name": "ledgity-v3-react",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0",
+    "react-router-dom": "^6.x",
+    "cobe": "^0.6.3",
+    "framer-motion": "^11.x",
+    "lucide-react": "^0.400.0"
+  },
+  "devDependencies": {
+    "vite": "^5.x",
+    "@vitejs/plugin-react": "^4.x",
+    "tailwindcss": "^3.4",
+    "postcss": "^8.x",
+    "autoprefixer": "^10.x",
+    "typescript": "^5.x",
+    "@types/react": "^18.3",
+    "@types/react-dom": "^18.3"
+  }
+}
