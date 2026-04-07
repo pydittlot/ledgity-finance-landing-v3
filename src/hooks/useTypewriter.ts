@@ -5,7 +5,7 @@ export const useTypewriter = (text: string, speed: number = 50): string => {
 
   useEffect(() => {
     let index = 0;
-    let timeoutId: NodeJS.Timeout;
+    let timeoutId: ReturnType<typeof setTimeout>;
 
     const typeCharacter = () => {
       if (index < text.length) {

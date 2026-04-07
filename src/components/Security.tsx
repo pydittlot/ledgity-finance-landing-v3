@@ -108,3 +108,5 @@ export const Security: React.FC = () => {
     </section>
   );
 };
+
+export default Security;

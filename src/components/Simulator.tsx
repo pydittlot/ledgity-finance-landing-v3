@@ -33,13 +33,6 @@ export const Simulator: React.FC = () => {
     }).format(value);
   };
 
-  const formatNumber = (value: number): string => {
-    return new Intl.NumberFormat('en-US', {
-      minimumFractionDigits: 0,
-      maximumFractionDigits: 0,
-    }).format(value);
-  };
-
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
@@ -178,3 +171,5 @@ export const Simulator: React.FC = () => {
     </section>
   );
 };
+
+export default Simulator;

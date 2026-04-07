@@ -129,3 +129,5 @@ export const Personas: React.FC = () => {
     </section>
   );
 };
+
+export default Personas;

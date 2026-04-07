@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { createGlobe } from 'cobe';
+import createGlobe from 'cobe';
 
 export const CobeGlobe: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -56,7 +56,7 @@ export const CobeGlobe: React.FC = () => {
         // Sydney
         { location: [-33.8688, 151.2093], size: 0.04 },
       ],
-      onRender: (state) => {
+      onRender: (state: Record<string, number>) => {
         state.phi = phi;
         phi += 0.005;
       },

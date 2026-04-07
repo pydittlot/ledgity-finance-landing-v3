@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Shield, CheckCircle, CreditCard, Plus, Activity, Download } from 'lucide-react';
+import { Shield, CreditCard, Plus, Activity, Download } from 'lucide-react';
 import { useLang } from '@/i18n/LangContext';
 
 export const Steps: React.FC = () => {
@@ -117,3 +117,5 @@ export const Steps: React.FC = () => {
     </section>
   );
 };
+
+export default Steps;
