@@ -5,11 +5,11 @@ import { useTypewriter } from '@/hooks/useTypewriter';
 import { CobeGlobe } from './CobeGlobe';
 
 export const Hero: React.FC = () => {
-  const { t } = useLang();
-  const typewriterText = useTypewriter(t('hero_typewriter'), 30);
+  const { t, tArray } = useLang();
+  const typewriterText = useTypewriter(tArray('hero_typewriter'), 60);
 
   return (
-    <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+    <section className="pt-28 pb-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Main Hero Content */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
@@ -22,17 +22,18 @@ export const Hero: React.FC = () => {
           >
             {/* Badge */}
             <div className="inline-flex items-center gap-2 w-fit px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
-              <span className="w-2 h-2 bg-primary rounded-full"></span>
+              <span className="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
               <span className="text-sm font-medium text-primary">{t('hero_badge')}</span>
             </div>
 
             {/* Title with Typewriter */}
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-2">
               <h1 className="text-5xl sm:text-6xl font-bold text-slate-900 leading-tight">
                 {t('hero_title')}
               </h1>
-              <div className="text-4xl sm:text-5xl font-bold text-primary h-16 flex items-center">
+              <div className="text-4xl sm:text-5xl font-bold text-primary min-h-[1.2em] flex items-center">
                 {typewriterText}
+                <span className="ml-1 inline-block w-[3px] h-[0.8em] bg-primary animate-pulse rounded-sm" />
               </div>
             </div>
 
@@ -42,7 +43,7 @@ export const Hero: React.FC = () => {
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+            <div className="flex flex-col sm:flex-row gap-4">
               <a
                 href="https://ledgity.finance/invest"
                 className="inline-flex items-center justify-center px-8 py-3 bg-primary text-white rounded-lg font-semibold hover:bg-primary/90 transition-colors"
@@ -76,7 +77,6 @@ export const Hero: React.FC = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-12 border-t border-slate-200"
         >
-          {/* TVL Stat */}
           <div className="flex flex-col gap-2 py-6">
             <span className="text-sm font-medium text-slate-500 uppercase tracking-wide">
               {t('stat_tvl')}
@@ -89,7 +89,6 @@ export const Hero: React.FC = () => {
             </a>
           </div>
 
-          {/* Yield Stat */}
           <div className="flex flex-col gap-2 py-6">
             <span className="text-sm font-medium text-slate-500 uppercase tracking-wide">
               {t('stat_yield')}
@@ -99,13 +98,12 @@ export const Hero: React.FC = () => {
             </p>
           </div>
 
-          {/* Access Stat */}
           <div className="flex flex-col gap-2 py-6">
             <span className="text-sm font-medium text-slate-500 uppercase tracking-wide">
               {t('stat_access')}
             </span>
             <p className="text-3xl sm:text-4xl font-bold text-slate-900">
-              {t('stat_access_value')}h
+              {t('stat_access_value')}h/7
             </p>
           </div>
         </motion.div>
