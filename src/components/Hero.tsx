@@ -67,7 +67,7 @@ export const Hero: React.FC = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="hidden lg:flex flex-shrink-0 items-center justify-center"
+            className="hidden md:flex flex-shrink-0 items-center justify-center"
             style={{ width: 420, height: 420 }}
           >
             <CobeGlobe />
