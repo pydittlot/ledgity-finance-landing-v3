@@ -162,7 +162,7 @@ export const Footer: React.FC = () => {
               <div>
                 <p className="text-xs mb-1" style={{ color: 'rgba(255,255,255,0.4)' }}>Adresse</p>
                 <p className="text-sm leading-relaxed" style={{ color: 'rgba(255,255,255,0.7)' }}>
-                  75, rue de Rivoli<br />75004 Paris, France
+                  AIR PROMENADE<br />470 PROMENADE DES ANGLAIS<br />06000 NICE, France
                 </p>
               </div>
             </div>

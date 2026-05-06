@@ -100,7 +100,7 @@ export const Hero: React.FC = () => {
             <div className="text-sm" style={{ color: '#64748b' }}>{t('stat_yield')}</div>
           </div>
           <div className="flex flex-col items-center justify-center py-8">
-            <div className="text-3xl font-bold mb-1" style={{ color: '#132031' }}>24h</div>
+            <div className="text-3xl font-bold mb-1" style={{ color: '#132031' }}>{t('stat_access_value')}</div>
             <div className="text-sm" style={{ color: '#64748b' }}>{t('stat_access')}</div>
           </div>
         </motion.div>
