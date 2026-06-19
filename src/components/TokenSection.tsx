@@ -6,7 +6,7 @@ export const TokenSection: React.FC = () => {
   const { t } = useLang();
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8" style={{ background: '#f9fafb' }}>
+    <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8" style={{ background: '#f9fafb' }}>
       <div className="max-w-3xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -22,11 +22,11 @@ export const TokenSection: React.FC = () => {
             {t('token_optional')}
           </div>
 
-          <h2 className="text-4xl sm:text-5xl font-bold mb-8" style={{ color: '#14181f' }}>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 sm:mb-8" style={{ color: '#14181f' }}>
             {t('token_title')}
           </h2>
 
-          <div className="flex flex-col gap-5 text-lg" style={{ color: '#64748b', lineHeight: 1.7 }}>
+          <div className="flex flex-col gap-5 text-base sm:text-lg" style={{ color: '#64748b', lineHeight: 1.7 }}>
             <p>{t('token_desc1')}</p>
             <p>{t('token_desc2')}</p>
           </div>

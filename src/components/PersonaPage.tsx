@@ -83,7 +83,7 @@ export const PersonaPage: React.FC = () => {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-4xl sm:text-5xl font-bold leading-tight mb-5"
+            className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-5"
             style={{ color: '#14181f' }}
           >
             {persona.title}
@@ -94,7 +94,7 @@ export const PersonaPage: React.FC = () => {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.15 }}
-            className="text-lg mb-10 max-w-2xl"
+            className="text-base sm:text-lg mb-10 max-w-2xl"
             style={{ color: '#64748b', lineHeight: 1.7 }}
           >
             {persona.description}
@@ -273,11 +273,11 @@ export const PersonaPage: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="rounded-3xl p-14 text-center"
+            className="rounded-3xl p-8 sm:p-12 lg:p-14 text-center"
             style={{ background: '#132031' }}
           >
-            <h2 className="text-3xl sm:text-4xl font-bold mb-5 text-white">{t('cta_title')}</h2>
-            <p className="text-lg mb-8 max-w-xl mx-auto" style={{ color: 'rgba(255,255,255,0.85)' }}>{t('cta_desc')}</p>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-5 text-white">{t('cta_title')}</h2>
+            <p className="text-base sm:text-lg mb-8 max-w-xl mx-auto" style={{ color: 'rgba(255,255,255,0.85)' }}>{t('cta_desc')}</p>
             <a
               href="https://ledgity.finance/account"
               className="inline-flex items-center justify-center px-8 py-3.5 rounded-lg font-semibold transition-all hover:bg-slate-100"

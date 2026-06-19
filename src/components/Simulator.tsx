@@ -22,14 +22,14 @@ export const Simulator: React.FC = () => {
   const fmt = (v: number) => v.toLocaleString('fr-FR', { maximumFractionDigits: 0 });
 
   return (
-    <section id="simulator" className="py-20 px-4 sm:px-6 lg:px-8" style={{ background: '#f9fafb' }}>
+    <section id="simulator" className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8" style={{ background: '#f9fafb' }}>
       <div className="max-w-6xl mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-4xl sm:text-5xl font-bold text-center mb-10"
+          className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-8 sm:mb-10"
           style={{ color: '#14181f' }}
         >
           {t('simulator_title')}
@@ -40,7 +40,7 @@ export const Simulator: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
           viewport={{ once: true }}
-          className="rounded-2xl border p-8 sm:p-10 max-w-2xl mx-auto"
+          className="rounded-2xl border p-6 sm:p-8 lg:p-10 max-w-2xl mx-auto"
           style={{ background: '#f6f7f9', borderColor: '#e5e7eb' }}
         >
           {/* Amount */}
@@ -88,20 +88,20 @@ export const Simulator: React.FC = () => {
 
           {/* Results */}
           <div
-            className="grid grid-cols-3 gap-4 p-5 rounded-xl"
+            className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 p-4 sm:p-5 rounded-xl"
             style={{ background: 'white', border: '1px solid #e5e7eb' }}
           >
             <div className="text-center">
               <div className="text-xs mb-1" style={{ color: '#64748b' }}>{t('simulator_capital')}</div>
-              <div className="text-xl font-bold" style={{ color: '#132031' }}>€{fmt(amount)}</div>
+              <div className="text-lg sm:text-xl font-bold break-words" style={{ color: '#132031' }}>€{fmt(amount)}</div>
             </div>
             <div className="text-center">
               <div className="text-xs mb-1" style={{ color: '#10b981' }}>{t('simulator_interest')}</div>
-              <div className="text-xl font-bold" style={{ color: '#10b981' }}>+€{fmt(interest)}</div>
+              <div className="text-lg sm:text-xl font-bold break-words" style={{ color: '#10b981' }}>+€{fmt(interest)}</div>
             </div>
             <div className="text-center">
               <div className="text-xs mb-1" style={{ color: '#64748b' }}>{t('simulator_total')}</div>
-              <div className="text-xl font-bold" style={{ color: '#132031' }}>€{fmt(total)}</div>
+              <div className="text-lg sm:text-xl font-bold break-words" style={{ color: '#132031' }}>€{fmt(total)}</div>
             </div>
           </div>
 

@@ -20,19 +20,19 @@ export const Security: React.FC = () => {
   ];
 
   return (
-    <section id="security" className="py-20 px-4 sm:px-6 lg:px-8" style={{ background: '#f9fafb' }}>
+    <section id="security" className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8" style={{ background: '#f9fafb' }}>
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-14"
+          className="text-center mb-10 sm:mb-14"
         >
-          <h2 className="text-4xl sm:text-5xl font-bold mb-4" style={{ color: '#14181f' }}>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4" style={{ color: '#14181f' }}>
             {t('security_title')}
           </h2>
-          <p className="text-lg max-w-2xl mx-auto" style={{ color: '#64748b' }}>
+          <p className="text-base sm:text-lg max-w-2xl mx-auto" style={{ color: '#64748b' }}>
             {t('security_desc')}
           </p>
         </motion.div>

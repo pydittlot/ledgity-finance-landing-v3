@@ -25,19 +25,19 @@ export const Personas: React.FC = () => {
   ];
 
   return (
-    <section id="personas" className="py-20 px-4 sm:px-6 lg:px-8">
+    <section id="personas" className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-14"
+          className="text-center mb-10 sm:mb-14"
         >
-          <h2 className="text-4xl sm:text-5xl font-bold mb-4" style={{ color: '#14181f' }}>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4" style={{ color: '#14181f' }}>
             {t('persona_title')}
           </h2>
-          <p className="text-lg max-w-2xl mx-auto" style={{ color: '#64748b' }}>
+          <p className="text-base sm:text-lg max-w-2xl mx-auto" style={{ color: '#64748b' }}>
             {t('persona_subtitle')}
           </p>
         </motion.div>
@@ -53,7 +53,7 @@ export const Personas: React.FC = () => {
             >
               <Link to={`/persona/${p.id}`} style={{ textDecoration: 'none' }}>
                 <div
-                  className="rounded-2xl border p-7 h-full transition-all hover:-translate-y-1 cursor-pointer"
+                  className="rounded-2xl border p-5 sm:p-7 h-full transition-all hover:-translate-y-1 cursor-pointer"
                   style={{ background: 'white', borderColor: '#e5e7eb', borderWidth: 1.5 }}
                   onMouseEnter={(e) => {
                     (e.currentTarget as HTMLDivElement).style.borderColor = '#1d4ed8';

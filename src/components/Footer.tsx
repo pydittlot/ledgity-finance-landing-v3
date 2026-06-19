@@ -45,12 +45,12 @@ export const Footer: React.FC = () => {
   const { t } = useLang();
 
   return (
-    <footer style={{ background: '#0c0e14', color: 'white', padding: '4rem 2rem 2rem' }}>
+    <footer className="px-4 sm:px-6 lg:px-8 pt-12 sm:pt-16 pb-6 sm:pb-8" style={{ background: '#0c0e14', color: 'white' }}>
       <div style={{ maxWidth: 1120, margin: '0 auto' }}>
 
         {/* Grid */}
         <div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-10"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 pb-8 sm:pb-10"
           style={{ borderBottom: '1px solid rgba(255,255,255,0.1)', marginBottom: '2rem' }}
         >
           {/* Col 1 — Logo + desc + badge + socials */}

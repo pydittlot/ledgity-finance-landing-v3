@@ -11,31 +11,11 @@ export default function HomePage() {
   return (
     <main>
       <Hero />
-      <section id="products" className="py-20">
-        <div className="max-w-6xl mx-auto px-6">
-          <Products />
-        </div>
-      </section>
-      <section id="simulator" className="py-20 bg-slate-50">
-        <div className="max-w-6xl mx-auto px-6">
-          <Simulator />
-        </div>
-      </section>
-      <section id="how-it-works" className="py-20">
-        <div className="max-w-6xl mx-auto px-6">
-          <Steps />
-        </div>
-      </section>
-      <section id="security" className="py-20 bg-slate-50">
-        <div className="max-w-6xl mx-auto px-6">
-          <Security />
-        </div>
-      </section>
-      <section id="personas" className="py-20">
-        <div className="max-w-6xl mx-auto px-6">
-          <Personas />
-        </div>
-      </section>
+      <Products />
+      <Simulator />
+      <Steps />
+      <Security />
+      <Personas />
       <TokenSection />
       <BottomCTA />
     </main>
