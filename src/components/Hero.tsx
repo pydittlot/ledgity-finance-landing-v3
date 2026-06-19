@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import { useLang } from '@/i18n/LangContext';
 import { useTypewriter } from '@/hooks/useTypewriter';
 import { CobeGlobe } from './CobeGlobe';
-import { CurrencyMarquee } from './CurrencyMarquee';
 
 export const Hero: React.FC = () => {
   const { t, tArray } = useLang();
@@ -63,25 +62,14 @@ export const Hero: React.FC = () => {
             </div>
           </motion.div>
 
-          {/* Globe + currency marquees — desktop only (>= lg / 1024px) */}
+          {/* Globe — desktop only (>= lg / 1024px) */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="hidden lg:flex relative flex-shrink-0 items-center justify-center w-[440px] h-[440px] xl:w-[500px] xl:h-[500px]"
+            className="hidden lg:flex flex-shrink-0 items-center justify-center w-[380px] h-[380px] xl:w-[420px] xl:h-[420px]"
           >
-            {/* Currency rails — behind the globe */}
-            <div
-              className="absolute inset-x-[-40px] pointer-events-none z-0 flex flex-col"
-              style={{ top: '22%', gap: '8rem' }}
-            >
-              <CurrencyMarquee />
-            </div>
-
-            {/* Globe — in front */}
-            <div className="relative z-10 w-[380px] h-[380px] xl:w-[420px] xl:h-[420px]">
-              <CobeGlobe />
-            </div>
+            <CobeGlobe />
           </motion.div>
         </div>
 
